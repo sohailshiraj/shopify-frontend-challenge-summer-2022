@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Spacestagram</h1>
+    <p>Bought to you by NASA's Mars Rover Photo APIs</p>
+    <div class="row">
+    <div *ngIf="isDataLoading" class="col-md-1 offset-md-5">
+        <mat-progress-spinner
+            class="example-margin"
+            color="warn"
+            mode="indeterminate"
+            value="50">
+        </mat-progress-spinner>
+    </div>
+    <ng-container *ngIf="!isDataLoading">
+    <div class="col-md-4 photo-card" *ngFor="let photo of roverPhotos | slice:0:40; let i=index">
+        <mat-card class="mat-elevation-z5">
+            <mat-card-header>
+                <mat-card-title>{{photo?.rover?.name + " - " + photo?.camera?.full_name}}</mat-card-title>
+                <mat-card-subtitle>{{photo?.earth_date}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <img mat-card-image [src]="photo.img_src" alt="photo captured by rover">
+            </mat-card-content>
+            <mat-card-actions>
+                <button *ngIf="photo?.liked" mat-icon-button color="warn" aria-label="like" (click)="unlikePost(i)">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button *ngIf="!photo?.liked"mat-icon-button color="warn" aria-label="unlike" (click)="likePost(i)">
+                    <mat-icon>favorite_border</mat-icon>
+                </button>
+              </mat-card-actions>
+          </mat-card>
+    </div>
+</ng-container>
+</div>
+</div>
