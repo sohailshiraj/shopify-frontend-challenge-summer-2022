@@ -1,6 +1,7 @@
 # Spacestagram: Image-sharing from the final frontier
 
 - Front End Developer Intern Challenge - Summer 2022
+- [Deployed App](https://sohailshiraj-shopify-challenge.herokuapp.com)
 - [Link to challenge](https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#heading=h.31w9woubunro)
 
 ---
@@ -17,9 +18,6 @@ git clone https://github.com/sohailshiraj/shopify-frontend-challenge-summer-2022
 cd shopify-frontend-challenge-summer-2022
 npm install
 ```
-
-Visit http://localhost:4200 in your browser to see the app running!
-
 
 ## Functionality
 - Fetching data from Mars Rover API Data from [here](https://api.nasa.gov/)
