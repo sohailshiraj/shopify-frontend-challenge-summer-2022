@@ -16,7 +16,6 @@ npm install -g @angular/cli
 git clone https://github.com/sohailshiraj/shopify-frontend-challenge-summer-2022.git
 cd shopify-frontend-challenge-summer-2022
 npm install
-ng serve --open
 ```
 
 Visit http://localhost:4200 in your browser to see the app running!
